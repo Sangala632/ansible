@@ -1,6 +1,6 @@
 - name: installing nginx and run
   hosts: frontend
-  connection: frontend
+  connection: ssh
   become: yes
   tasks: 
     - name: install inginx
