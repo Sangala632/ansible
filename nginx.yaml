@@ -1,6 +1,6 @@
 - name: installing nginx and run
-  hosts: local
-  connection: local
+  hosts: webserver
+  connection: webserver
   become: yes
   tasks: 
     - name: install inginx
