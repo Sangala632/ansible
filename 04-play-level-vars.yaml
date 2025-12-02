@@ -1,12 +1,12 @@
 - name: paly level varibles
   hosts: local
-  connection: local
+  connection: localhost
   vars:
-    course: ansible
-    duration: 10HR
-    trainer: sreekanth
+    COURSE: ansible
+    DURATION: 10HR
+    TRAINER: sreekanth
   tasks:
     - name: print the cource details
       ansible.builtin.debug:
       #vars in ansible reference should be by ""
-        msg: " hello {{ cource }},cource duration: {{ duration }}.trainer name:{{ trainer }} "
+        msg: "hello {{ COURSE }},cource duration: {{ DURATION }}.trainer name:{{ TRAINER }}"
