@@ -1,0 +1,19 @@
+- name: paly level varibles
+  hosts: local
+  connection: local
+  vars:
+    course: devops with aws
+    duration: 10HR
+    trainer: sreekanth
+  tasks:
+    - name: print the cource details
+      vars:
+        cource: ansible
+      ansible.builtin.debug:
+      #vars in ansible reference should be by ""
+        msg: " hello {{ cource }},cource duration: {{ duration }}.trainer name:{{ trainer }} "
+    
+    - name: print the cource details
+      ansible.builtin.debug:
+      #vars in ansible reference should be by ""
+        msg: " hello {{ cource }},cource duration: {{ duration }}.trainer name:{{ trainer }} "
