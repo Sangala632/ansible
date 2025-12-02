@@ -2,18 +2,18 @@
   hosts: local
   connection: local
   vars:
-    course: devops with aws
-    duration: 10HR
-    trainer: sreekanth
+    COURSE: devops with aws
+    DURATION: 10HR
+    TRAINER: sreekanth
   tasks:
     - name: print the cource details
       vars:
-        cource: ansible
+        COURSE: ansible
       ansible.builtin.debug:
       #vars in ansible reference should be by ""
-        msg: " hello {{ cource }},cource duration: {{ duration }}.trainer name:{{ trainer }} "
+        msg: "hello {{ COURSE }}, cource duration: {{ DURATION }}, trainer name:{{ TRAINER }}"
     
     - name: print the cource details
       ansible.builtin.debug:
       #vars in ansible reference should be by ""
-        msg: " hello {{ cource }},cource duration: {{ duration }}.trainer name:{{ trainer }} "
+        msg: "hello {{ COURSE }},cource duration: {{ DURATION }}, trainer name:{{ TRAINER }}"
