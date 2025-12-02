@@ -1,13 +1,11 @@
-- name: paly level varibles
-  hosts: local
+- name: play level variables
+  hosts: localhost
   connection: local
 
-  vars_files:       #ACCESSING THE VARIBLES OUTSIDE FROM COURSE.YAML
-    - cource.yaml
+  vars_files:        # accessing variables from external file
+    - course.yaml
 
   tasks:
-    - name: print the cource details
+    - name: print the course details
       ansible.builtin.debug:
-      #vars in ansible reference should be by ""
-        msg: "hello {{ COURSE }},cource duration: {{ DURATION }}.trainer name:{{ TRAINER }}"
-    
+        msg: "Hello {{ COURSE }}, course duration: {{ DURATION }}, trainer name: {{ TRAINER }}"
