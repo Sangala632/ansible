@@ -21,4 +21,4 @@
   tasks:
     - name: printing the course details
       ansible.builtin.debug:
-        msg: "course is {{ COURSE }}, duration is:: {{ DURATION }}, to-live is :: {{ TO-LIVE }}, tools i am using is :: {{ TOOLS }}, concepts are i am using is :: {{ CONCEPTS }}"
+        msg: "course is: {{ COURSE }}, duration is: {{ DURATION }}, to-live is: {{ TO-LIVE }}, tools i am using is: {{ TOOLS }}, concepts are i am using is: {{ CONCEPTS }}"
