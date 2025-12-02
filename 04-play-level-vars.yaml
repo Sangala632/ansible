@@ -1,6 +1,6 @@
-- name: paly level varibles
+- name: play level varibles
   hosts: local
-  connection: localhost
+  connection: local
   vars:
     COURSE: ansible
     DURATION: 10HR
@@ -9,4 +9,4 @@
     - name: print the cource details
       ansible.builtin.debug:
       #vars in ansible reference should be by ""
-        msg: "hello {{ COURSE }},cource duration: {{ DURATION }}.trainer name:{{ TRAINER }}"
+        msg: "hello {{ COURSE }}, cource duration: {{ DURATION }}. trainer name:{{ TRAINER }}"
