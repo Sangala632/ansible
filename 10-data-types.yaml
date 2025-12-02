@@ -1,0 +1,21 @@
+- name: DATA TYPES 
+  hosts: local
+  connection: local
+  vars:
+    COURSE: DEVSECOPS WITH aws    #STRING TYPE
+    DURATION: 120HR    # INITGER IS A NUMBER
+    TO-LIVE: true
+  TOOLS:       # list reffers to []
+    - linux
+    - ansible
+    - terraform
+    - cicd
+    - docker
+  CONCEPTS:       #MAP OR DIRECTORY OR MODULE OR OBJECT
+    CI: JENKINS
+    SCRIPTING: "SHELL, ANSIBLE, TERRAFORM, PYTHON"
+  
+  tasks:
+    - name: printing the course details
+      ansible.builtin.debug:
+        msg: "course is {{ COURSE }}, duration is:: {{ DURATION }}, to-live is :: {{ TO-LIVE }}, tools i am using is :: {{ TOOLS }}, concepts are i am using is :: {{ CONCEPTS }}"
