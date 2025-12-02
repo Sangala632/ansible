@@ -1,11 +1,13 @@
 - name: paly level varibles
   hosts: local
   connection: local
+
   vars_files:       #ACCESSING THE VARIBLES OUTSIDE FROM COURSE.YAML
-    cource.yaml
+    - cource.yaml
+
   tasks:
     - name: print the cource details
       ansible.builtin.debug:
       #vars in ansible reference should be by ""
-        msg: " hello {{ COURSE }},cource duration: {{ DURATION }}.trainer name:{{ TRAINER }} "
+        msg: "hello {{ COURSE }},cource duration: {{ DURATION }}.trainer name:{{ TRAINER }}"
     
