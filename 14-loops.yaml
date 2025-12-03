@@ -1,11 +1,11 @@
 - name: lopps in ansible
   hosts: local
   connection: local
-  loops:
-  - suresh
-  - sreekanth 
-  - varees
-  - madhu
+    loops:
+    - suresh
+    - sreekanth 
+    - varees
+    - madhu
 
   tasks:
   - name: prints names
