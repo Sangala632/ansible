@@ -1,0 +1,12 @@
+- name: instaling the packges
+  hosts: frontend
+  become: yes
+  tasks: 
+  - name: install packges
+    ansible.builtin.package:
+      name: {{ item.name }}
+      state: {{ itam.state }}
+    loop:
+    - { name: 'mysql', state: 'present' }
+    - { name: 'nginx', state: 'absent' }
+    - { name: 'zip', state: 'absent' }
