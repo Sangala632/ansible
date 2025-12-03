@@ -1,15 +1,15 @@
-  -name: lopps in ansible
-  hosts: local
-  connection: local
-  tasks:
-  - name: prints names
-    ansible.builtin.debug:
-      msg: "hello, {{ items }}"
-    loops:
-    - suresh
-    - sreekanth 
-    - varees
-    - madhu
+  - name: lopps in ansible
+    hosts: local
+    connection: local
+    tasks:
+    - name: prints names
+      ansible.builtin.debug:
+        msg: "hello, {{ item }}"
+      loop:
+      - suresh
+      - sreekanth 
+      - varees
+      - madhu
   
   # - name: loops
   # hosts: local
