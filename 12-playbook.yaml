@@ -1,0 +1,7 @@
+- name: playbook control facts
+  hosts: local
+  connection: local
+  tasks:
+  - name: playbook facts
+    ansible.builtin.debug:
+      msg: "hello,{{ ansible_facts }}"
